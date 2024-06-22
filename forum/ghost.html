@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Ваши заметки: инфо-пост</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1 align="center">Сообщество нн</h1>
+            <h3 align="center">Наше сообщество помогает найти таких же изгоев, как вы:)</h3>
+        </div>
+        <div class="def">
+            <div class="menu">
+                <h3>Меню</h3>
+                <ul>
+                    <li><a href="newtopic.html">Новая тема</a></li>
+                    <li><a href="yourtopic.html">Ваши темы</a></li>
+                    <li><a href="cont.html">Связь</a></li>
+                    <li><a href="accounts s.html">Выйти</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>Ваши заметки</h2>
+                <h3>
+                    Автор: <a href="cont.html">СОЗДАТЕЛЬ</a>
+                </h3>
+                <p>
+                    Вы используете гостевой аккаунт. Комментарии не сохраняются, но вы можете оставить заметку. После обновления страницы / после выхода из страницы заметка пропадает. <a href="accounts s.html">Войти</a>
+                </p>
+                <h4>ИНФОРМАЦИОННЫЙ ПОСТ</h4>
+                <h1>=Комментарии=</h1>
+                <h2>Оставить комментарий:</h2>
+                <input type="text", id="comment" /><input type="text", id="author" /><button id="theButton">Отправить</button>
+                <h2>
+                <div id="comments">
+                    <a href="ghost.html">Ваши заметки</a>
+                    </h2>
+                    <h2><l>Комментарии недоступны, но вы можете оставить заметку</l></h2>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p align="center">
+                Сайт создан гл.НН
+                <p align="center">
+                    <a href="home.html">Главная</a>
+                </p>
+            </p>
+        </div>
+        <script>
+            let author = document.getElementById('author')
+            let comment = document.getElementById('comment')
+            let theButton = document.getElementById('theButton')
+            let comments = document.getElementById('comments')
+
+            function enter() {
+                comments.innerHTML +=`
+                <div>
+                    <h3>${author.value}(<span class="anon">гость</span>)</h3>
+                    <p class="anon">${comment.value}</p>
+                </div>`;
+                author.value = ''
+                comment.value = ''
+
+            }
+                            theButton.onclick = enter
+        </script>
+        <style>
+            body {
+                margin: 0;
+                background-color: rgb(167, 167, 167);
+                font-family: 'Courier New';
+            }
+            div {
+                border: 1px solid;
+            }
+            .def {
+                display: flex;
+            }
+            .header {
+                height: 15%;
+                padding-right: 12px;
+                border-radius: 15px;
+            }
+            .menu {
+                height: 15%;
+                border-radius: 15px;
+            }
+            .content {
+                height: 65%;
+                width: 60%;
+                                border-radius: 15px;
+            }
+            .footer {
+                height: 15%;
+            }
+            .content > p {
+                margin: 18px;
+            }
+            .menu > h2 {
+                text-align: center;
+            }
+            .content > h3 {
+                margin: 18px;
+            }
+            a {
+                color: white;
+            }
+            .content > div {
+                margin: 18px;
+            }
+            .content > h2 {
+                margin: 14px;
+            }
+            .content > h6 {
+                margin: 14px;
+            }
+            .content > h4 {
+                margin: 14px;
+            }
+            .content > input {
+                margin: 14px;
+            }
+            .content > h1 {
+                margin: 18px;
+            }
+            .content > button.anon {
+                background-color: rgb(156, 156, 156);
+            }
+            .anon {
+                color: rgba(0, 0, 0, 0.292);
+            }
+        </style>
+    </body>
+</html>

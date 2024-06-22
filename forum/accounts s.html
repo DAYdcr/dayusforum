@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Вход</title>
+    </head>
+    <body>
+        <div class="enter">
+            <h1 align="center">Авторизация</h1>
+            <p align="center">
+                <input type="text", id="username", placeholder="Имя пользователя" />
+            </p>
+            <p align="center">
+                <input type="password", id="password", placeholder="Пароль" />
+            </p>
+            <p align="center">
+                <button id="button"><a>ВОЙТИ</a></button>
+            </p>
+        </div>
+        <script>
+            let usernameInput = document.getElementById("username")
+            let passwordInput = document.getElementById("password")
+            let button = document.getElementById("button")
+
+            function enter() {
+                if (usernameInput.value == 'гл.НН' && passwordInput.value == 'im just a freak') {
+                    window.open('home.html')
+                } 
+                if (usernameInput.value == 'qwerty' && passwordInput.value == '123') {
+                    window.open('home.html')
+                }
+                if (usernameInput.value == '' && passwordInput.value == '') {
+                    alert('У Вас гостевой аккаунт. Нажмите "ок" чтобы продолжить'), window.open('home.html')
+                } else {
+                    alert('Неправильный логин или пароль')
+                }
+            }
+            button.onclick = enter
+        </script>
+    </body>
+    <style>
+        body {
+            background-color: rgb(0, 80, 80);
+            font-family: 'Courier New';
+        }
+        button {
+            display: block;
+            width: 100px;
+            padding: 10px;
+            background-color: #6aaeae;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0px 0px 20px #6aaeae;
+            border: 3px solid;
+        }
+        button:hover {
+            display: block;
+            width: 100px;
+            padding: 10px;
+            background-color: #4b7f7f;
+            color: #dbdbdb;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0px 0px 20px #6aaeae;
+            border: 3px solid;
+        }
+        input {
+            background-color: #cccccc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px #cccccc;
+            border: 3px solid;
+        }
+        input:hover {
+            background-color: #a4a4a4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 3px solid;
+        }
+        .enter {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            height: 200px;
+            width: 400px;
+        }
+    </style>
+</html>

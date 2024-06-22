@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <title>Пост: 21.06.24</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1 align="center">Сообщество нн</h1>
+            <h3 align="center">Наше сообщество помогает найти таких же изгоев, как вы:)</h3>
+        </div>
+        <div class="def">
+            <div class="menu">
+                <h3>Меню</h3>
+                <ul>
+                    <li><a href="newtopic.html">Новая тема</a></li>
+                    <li><a href="yourtopic.html">Ваши темы</a></li>
+                    <li><a href="cont.html">Связь</a></li>
+                    <li><a href="accounts s.html">Выйти</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>Пост</h2>
+                <h3>
+                    Автор: <a href="anon.html">anon_account</a>
+                </h3>
+                <p>
+                    К задачам философии на протяжении веков относились как изучение всеобщих законов развития мира и общества, так и изучение самого процесса познания и мышления, а также изучение нравственных категорий и ценностей. К числу предельных философских вопросов относятся, например, вопросы: «Познаваем ли мир?», «Существует ли Бог?», «Что такое истина?», «Что такое хорошо?», «Что есть Человек?», «Что первично — материя или сознание?», «В чём смысл жизни?» и другие. Философия существует в виде различных областей и направлений, которые могут противостоять и дополнять друг друга[7]. Сейчас к философии относят: метафизику, эпистемологию, логику, этику, эстетику, социальную и политическую философию и философию науки.
+                    Те области познания, для которых удаётся выработать ясную и работоспособную методологическую парадигму, выделяются из философии в научные дисциплины, как, например, из древней философии выделились физика, биология и психология[8][9].
+                    Слово «философия» заимствовано у древнегреческих философов. Известный филолог и историк античности Герман Дильс указывает, что самое раннее употребление существительного φιλοσοφία и глагола φιλοσοφέω в дошедших до нас текстах встречается у историков Геродота и Фукидида в связи с существительными σοφός и σοφιστής[10]. Только у Сократа это слово превращается в специальный термин в значении, близком к современному.
+                    Хотя иногда философию определяют более узко, в качестве науки с определённым предметом изучения[6], такой подход встречает возражения современных философов, настаивающих на том, что философия представляет собой скорее мировоззрение, общий критический подход к познанию всего сущего, который применим к любому объекту или концепции[8][11]. В этом смысле каждый человек хотя бы изредка занимается философией, то есть размышляет
+                </p>
+                <h4>21.06.24 - 12:00</h4>
+                <h1>=Комментарии=</h1>
+                <h2>Оставить комментарий:</h2>
+                <input type="text", id="comment" /><input type="text", id="author" /><button id="theButton">Отправить</button>
+                <h2>
+                <div id="comments">
+                    <a href="ghost.html">Ваши заметки</a>
+                    </h2>
+                    <h2>Анонимный пользователь</h2>
+                    <p>
+                        Вау! Как жаль, что я не философ((
+                    </p>
+                    <h6>Сегодня в 12:13</h6>
+                    <h2>
+                        <a href="anon.html">anon_account</a>
+                    </h2>
+                    <p>
+                        Я пойду учиться на философа, очень интересная профессия!
+                    </p>
+                    <h6>Сегодня в 12:12</h6>
+                    <h2>
+                        <a href="anon.html">anon_account</a>
+                    </h2>
+                    <p>
+                        Очень интересно!
+                    </p>
+                    <h6>Сегодня в 12:10</h6>
+                    <h2>
+                        <a href="anon.html">anon_account</a>
+                    </h2>
+                    <p>
+                        Это из Википедии!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    </p>
+                    <h6>Сегодня в 12:05</h6>
+                    <h2>
+                        <a href="anon.html">anon_account</a>
+                    </h2>
+                    <p>
+                        ЕЕЕ! Я не знал
+                    </p>
+                    <h6>Сегодня в 12:00</h6>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p align="center">
+                Сайт создан гл.НН
+                <p align="center">
+                    <a href="home.html">Главная</a>
+                </p>
+            </p>
+        </div>
+        <script>
+            let author = document.getElementById('author')
+            let comment = document.getElementById('comment')
+            let theButton = document.getElementById('theButton')
+            let comments = document.getElementById('comments')
+
+            function enter() {
+                comments.innerHTML +=`
+                <div>
+                    <h3>${author.value}(<span class="anon">гость</span>)</h3>
+                    <p class="anon">${comment.value}</p>
+                </div>`;
+                author.value = ''
+                comment.value = ''
+
+            }
+                            theButton.onclick = enter
+        </script>
+        <style>
+            body {
+                margin: 0;
+                background-color: rgb(167, 167, 167);
+                font-family: 'Courier New';
+            }
+            div {
+                border: 1px solid;
+            }
+            .def {
+                display: flex;
+            }
+            .header {
+                height: 15%;
+                padding-right: 12px;
+                border-radius: 15px;
+            }
+            .menu {
+                height: 15%;
+                border-radius: 15px;
+            }
+            .content {
+                height: 65%;
+                width: 60%;
+                                border-radius: 15px;
+            }
+            .footer {
+                height: 15%;
+            }
+            .content > p {
+                margin: 18px;
+            }
+            .menu > h2 {
+                text-align: center;
+            }
+            .content > h3 {
+                margin: 18px;
+            }
+            a {
+                color: white;
+            }
+            .content > div {
+                margin: 18px;
+            }
+            .content > h2 {
+                margin: 14px;
+            }
+            .content > h6 {
+                margin: 14px;
+            }
+            .content > h4 {
+                margin: 14px;
+            }
+            .content > input {
+                margin: 14px;
+            }
+            .content > h1 {
+                margin: 18px;
+            }
+            .content > button.anon {
+                background-color: rgb(156, 156, 156);
+            }
+            .anon {
+                color: rgba(0, 0, 0, 0.292);
+            }
+        </style>
+    </body>
+</html>
